@@ -1,4 +1,4 @@
 # myvent
 A project of website that allows users to organize and mainatin events
 
-https://travis-ci.org/WojciechSalapatek/myvent.svg?branch=master
+[![Build Status](https://travis-ci.org/WojciechSalapatek/myvent.svg?branch=master)](https://travis-ci.org/WojciechSalapatek/myvent)
