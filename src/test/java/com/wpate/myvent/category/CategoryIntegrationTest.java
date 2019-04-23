@@ -1,5 +1,7 @@
 package com.wpate.myvent.category;
 
+import com.wpate.myvent.MyventApplication;
+import com.wpate.myvent.configuration.H2TestProfileJPAConfig;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +11,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -16,7 +19,8 @@ import static org.mockito.BDDMockito.given;
 import static org.springframework.boot.test.context.SpringBootTest.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = {MyventApplication.class, H2TestProfileJPAConfig.class})
+@ActiveProfiles("test")
 public class CategoryIntegrationTest {
 
     @Autowired
