@@ -31,7 +31,7 @@ public class CategoryIntegrationTest {
         given(repository.findById(anyLong())).willReturn(java.util.Optional.of(new Category(0, "Sport", "dsc")));
 
         //act
-        ResponseEntity<Category> response = restTemplate.getForEntity("/categories/0", Category.class);
+        ResponseEntity<CategoryDTO> response = restTemplate.getForEntity("/categories/0", CategoryDTO.class);
 
         //assert
         Assertions.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);

@@ -17,4 +17,6 @@ public class CategoryService {
     public Category getCategory(long id) {
         return repository.findById(id).orElseThrow(() -> new CategoryNotFoundException("Category with this id doesn't exist"));
     }
+
+    public void add(Category category) { repository.save(category); }
 }
