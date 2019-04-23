@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,6 +24,7 @@ public class EventController {
 
     @GetMapping("/categories/events")
     public List<EventDTO> getAll(){
+        service.addEvent(Event.EventBuilder.anEvent(0, "Gymning", new Date()).build());
         return service.getAll().stream()
                 .map(e -> mapper.map(e, EventDTO.class))
                 .collect(Collectors.toList());

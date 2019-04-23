@@ -1,9 +1,11 @@
 package com.wpate.myvent.event;
 
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 import java.util.Date;
 
+@Data
 public class EventDTO {
 
     private long id;
