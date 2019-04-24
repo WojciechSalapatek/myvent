@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(EventController.class)
+@WebMvcTest(controllers = EventController.class, secure = false)
 public class EventControllerTest {
 
     @Autowired

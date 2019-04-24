@@ -13,7 +13,8 @@ import javax.sql.DataSource;
 @Configuration
 @EnableJpaRepositories(basePackages = {
         "com.wpate.myvent.category",
-        "com.wpate.myvent.event"
+        "com.wpate.myvent.event",
+        "com.wpate.myvent.user"
 })
 @EnableTransactionManagement
 public class H2TestProfileJPAConfig {
